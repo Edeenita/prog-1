@@ -22,6 +22,8 @@ public class ejercico_3_forma2corta {
             }else if (fecha == sabado && nro_ticket % 2 == 0 && importe >= 15000 && dni % 2 != 0 ) {
                 double descuento = importe * 0.08;
                 System.out.println("Su descuento es de: $" + descuento);
+            }else if (fecha != viernes && fecha != sabado ) {
+                    System.out.println("Ingrese un día valido! 1 para viernes, 2 para sábado");
             }else{
                 System.out.println("Ingrese un numero valido 🐦");
             }
