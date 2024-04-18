@@ -26,5 +26,8 @@ Los trabajos están organizados según su estado de avance: Subidos y Por realiz
 ## Contribución
 **Edena**
 
+## Tips y buenas practicas:
+*todavia no las puse*
+
 ![](https://img.desmotivaciones.es/201102/java.jpg)
 >Sin memes no podría aguantar la demencia
