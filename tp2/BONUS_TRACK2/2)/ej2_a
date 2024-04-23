@@ -1,0 +1,40 @@
+/*
+*   Dado un caracter ingresado por el usuario: imprimir si es
+*   caracter minúscula, o imprimir si es carácter mayúscula, o
+*   imprimir no es caracter letra
+ */
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+
+public class ej2_a {
+    public static void main(String[] args) {
+        char caracter;
+        BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
+        try{
+            System.out.println("Ingrese un caracter :");
+            caracter = entrada.readLine().charAt(0);
+            if (('a'<=caracter)||(caracter<='z')) {
+                // los operadores lógicos no están siendo usados correctamente.
+                // se debería usar && en lugar de || para verificar si es una minúscula.
+            System.out.println("Es carácter minúscula");
+            }   
+            if (('A'<=caracter)&&(caracter<='Z')) {
+                // debería ser un else if para evitar que se evalúe esta condición si la primera es verdadera.
+                // Los operadores lógicos no están siendo usados correctamente.
+                // las comparaciones deberían ser con < y > en lugar de <= y >=.        
+            System.out.println("Es carácter mayúscula");
+            }
+            else {
+                //no está relacionado con la primer condición if por lo que no resultaria como se quiere
+                // se resuelve con un else if
+            System.out.println("No es caracter letra");
+            }
+        }
+        catch (Exception exc){
+        System.out.println(exc);
+        }
+    }
+}

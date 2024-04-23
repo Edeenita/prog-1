@@ -1,0 +1,45 @@
+/*
+*   Dado un número positivo, imprimir “Tiene 1 dígito” si el
+*   número pertenece al rango [0..9] o “Tiene 2 dígitos” si el
+*   número pertenece al rango [10..99] o “Tiene 3 o más dígitos”
+*   si el número es mayor o igual a 100.
+ */
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class Practica_2_Bonus_5 {
+    public static void main(String[] args) {
+        int numero = 235; // valor de ejemplo
+        if (numero >= 0 && numero < 10) {
+             // Imprime "Tiene 1 dígito" si el número es de un solo dígito
+            System.out.println("Tiene 1 dígito");
+        }
+         // La condición en este else if no está correctamente formulada
+         // El operador !(negación lógica) no debería estar presente, y las condiciones
+         // en la cláusula if y en el else if están invertidas. Además, esta condición
+         // no está verificando si el número pertenece al rango [10..99].
+        else if (!(numero < 10 && numero >= 100)) {
+             // Imprime "Tiene 2 dígitos" si el número no es de un solo dígito y no pertenece al rango [10..99]
+            System.out.println("Tiene 2 dígitos");
+        }
+         // Imprime "Tiene 3 o más dígitos" al finalizar los if
+         //esta condición deberia estar dentro de un else
+         //ya que siempre se ejecutaria en cualquier caso
+        System.out.println("Tiene 3 o más dígitos");
+    }
+}
+
+/*
+* ejemplo bien hecho:
+*   int numero = 235; // valor de ejemplo
+*           if (numero >= 0 && numero < 10) {
+*               System.out.println("Tiene 1 dígito");
+*           } else if (numero >= 10 && numero <= 99) {
+*               System.out.println("Tiene 2 dígitos");
+*           } else {
+*               System.out.println("Tiene 3 o más dígitos");
+*           }
+*       }
+*   }
+ */
