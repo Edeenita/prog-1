@@ -1,0 +1,26 @@
+b)
+
+public class Practica_2_Bonus_2{
+    public static void main(String[] args) {
+        int valor=5; // se declara un entero valor con valor igual a 5
+        for (;valor>0;valor++) //falta la variable de control, dentro del for  
+                                // si la variable de control es valor es buena
+                                // practica declararla dentro del for
+                                // tampoco hay un medio de corte del for
+                                // por lo que se ejecutaria infinitamente
+                                // un ejemplo bien hecho sería:
+                                // final int MAX = 100; //por dar un ejemplo!
+                                // otro sería que MAX sea un valor ingresado por teclado
+                                // donde el usuario limite la cantidad de secuencias
+                                // que se ejecute el for
+                                // for(int valor = 5; valor <= MAX; valor++){ //for declarado correctamente
+                                //  sentencia  
+                                //  }
+                                // quedaría:
+                                // final int MAX = 100; // Se establece un límite de iteración
+                                // for (int valor = 5; valor <= MAX; valor++) { // Se declara el bucle "for" correctamente
+                                //     sentencia
+                                // }
+            System.out.println("Valor es: " + valor);
+    }
+}

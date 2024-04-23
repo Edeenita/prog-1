@@ -1,0 +1,21 @@
+c)
+
+public class Practica_2_Bonus_3{
+    public static void main(String[] args) {
+        final int MAX=100; //constante MAX con valor en 100
+        int valor=5; // entero valor con valor en 5
+        while (valor<MAX) // este while compila siempre que valor sea menor a max
+                            // en ningun momento valor aumenta por lo que siempre es 5
+                            // entonces el while es un ciclo infinito
+                            // y siempre ejecutaria el print con valor igual a 5
+                            // la condición de corte deberia ser dentro del while
+                            // un valor++
+                            // tampoco tiene {} y aunque sea de una sola linea es mala practica.
+                            // ejemplo:
+                            // while (valor < MAX) {
+                            //     System.out.println("Valor es: " + valor);
+                            //     valor++; // Incrementa el valor en cada iteración
+                            // }
+        System.out.println("Valor es: " + valor);
+    }
+}

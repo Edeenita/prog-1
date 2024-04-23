@@ -1,0 +1,18 @@
+a)
+public class Practica_2_Bonus_1{
+    public static void main(String[] args) {
+    char opcion=’a’; //declara un char con valor 'a' (se obvian las comillas ya que es copypaste)
+    int valor=5; //declara un entero con valor 5.
+    switch (opcion){ // opción va a ser igual a ya que no se pide ninguna entrada por teclado
+        case ‘a’: opcion=’b’; // ya que la condición es a, el valor de opcion se convirte en b
+                            //  y sigue ejecutando el siguiente case ya que no hay un break
+        case ‘b’: valor=4;break; //como ahora el valor de opcion es b compila y valor va a ser 4 y como hay break deja de ejecutar
+        case ‘c’: case ‘d’: case ‘e’: { //nunca se va a ejecutar esta linea ya que opcion nunca va a valer 'c', 'd' o 'e'
+                opcion=’z’;
+                valor=99;
+        }
+        default:opcion=’a’; // si no se ejecuta nada, opcion se convierte nuevamente en 'a'
+                            // le falta el break al default.
+        }
+    }
+}
