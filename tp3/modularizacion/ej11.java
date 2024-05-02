@@ -1,4 +1,4 @@
-package tp3;
+package tp3.modularizacion;
 
 /*
  * Escribir un método que retorne el mayor de dos números. Usar

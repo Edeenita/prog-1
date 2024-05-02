@@ -1,4 +1,4 @@
-package tp3;
+package tp3.diseño_descendente;
 
 /*
  * Escribir un diseño de programa que mientras que el usuario

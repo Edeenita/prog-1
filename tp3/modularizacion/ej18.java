@@ -1,4 +1,4 @@
-package tp3;
+package tp3.modularizacion;
 
 /*
  * Escribir un programa que imprima por pantalla los números

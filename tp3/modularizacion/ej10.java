@@ -1,4 +1,4 @@
-package tp3;
+package tp3.modularizacion;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

@@ -1,4 +1,4 @@
-package tp3;
+package tp3.modularizacion;
 
 /*
  * Realizar un programa que dado dos números enteros y un

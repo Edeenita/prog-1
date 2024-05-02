@@ -1,4 +1,4 @@
-package tp3;
+package tp3.modularizacion;
 
 /*
  * Realizar un programa que, dada una opción entera (1,2,3,4),

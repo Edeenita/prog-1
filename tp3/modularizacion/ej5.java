@@ -1,4 +1,4 @@
-package tp3;
+package tp3.modularizacion;
 
 /*
  * Hacer un método que dado un número entero con valor inicial 1,
