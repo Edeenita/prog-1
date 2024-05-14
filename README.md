@@ -28,16 +28,18 @@ Los trabajos están organizados según su estado de avance: Subidos y Por realiz
 **Declaración de un array**
 
 - Nulo
+```java
 int [] arrDatos;
-
--Todo cero
+```
+- Todo cero
+```java
 int [] arrDatos = new int [5];
-
--Datos cargados
-
+```
+- Datos cargados
+```java
 int [] arrDatos = {9, 6, 4, 2, 5};
-
-**Acceder a un array**
+```
+### **Acceder a un array**
 
 - Accede a la posición 0 del array y le asigna el valor 1
 ```java
@@ -45,9 +47,10 @@ arrDatos[0] = 1;
 ```
 - Accede a la posición del array mediante una variable pos y se le asigna valor 5
 - pos tiene valor entre 0 y CANTIDAD-1 (ya que los arrays empiezan a contar desde el indice 0)
+```java
 pos = 2;
 arreDatos[pos] = 5;
-
+```
 **Codigos sobre arrays**
 
 - Mostrar array:
@@ -73,7 +76,7 @@ public staic void cargarArray ( int[] arrEnteros ){
     }
 }
 ```
--Cargar array de tipo char por teclado:
+- Cargar array de tipo char por teclado:
 ```java
 public static void cargarArray(char[] arrChar) {
         BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
@@ -116,7 +119,7 @@ Se utiliza para insertar un elemento a un array
 - Corrimiento a la izquierda
 Se utiliza para eliminar un elemento de un array
 
-- **Estructuras ordenadas**
+### **Estructuras ordenadas**
 - Desordenado
 ```java
 private static int buscar_pos_desordenado (int [] arr, int valor){
@@ -145,8 +148,8 @@ private static int buscar_pos_ordenado (int [] arr, int valor){
     }
 }
 ```
-- **Metodos de ordenamiento**
-Selección
+### **Metodos de ordenamiento**
+- Selección
 ```java
 public static void seleccion(int arr[]) {
     int i, j, menor, pos, tmp;
