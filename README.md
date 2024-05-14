@@ -40,8 +40,9 @@ int [] arrDatos = {9, 6, 4, 2, 5};
 **Acceder a un array**
 
 - Accede a la posición 0 del array y le asigna el valor 1
+```java
 arrDatos[0] = 1;
-
+```
 - Accede a la posición del array mediante una variable pos y se le asigna valor 5
 - pos tiene valor entre 0 y CANTIDAD-1 (ya que los arrays empiezan a contar desde el indice 0)
 pos = 2;
@@ -50,13 +51,15 @@ arreDatos[pos] = 5;
 **Codigos sobre arrays**
 
 - Mostrar array:
+```java
 public staic void mostrarArray ( int[] arrEnteros ){
     for (int pos = 0; pos < MAX; pos++){
         System.out.println ("arrEnteros["+ pos +"] -> " + arrEnteros[pos]);
     }
 }
-
+```
 - Cargar array de tipo entero por teclado:
+```java
 public staic void cargarArray ( int[] arrEnteros ){
     BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
     try{
@@ -69,8 +72,9 @@ public staic void cargarArray ( int[] arrEnteros ){
         System.out.println(exc)
     }
 }
-
+```
 -Cargar array de tipo char por teclado:
+```java
 public static void cargarArray(char[] arrChar) {
         BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
         try {
@@ -82,8 +86,9 @@ public static void cargarArray(char[] arrChar) {
             System.out.println(exc);
         }
     }
-
+```
 - Obtener posición de un elemento del array
+```java
 public static int obtenerNumero (){
     BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
     try{
@@ -94,8 +99,9 @@ public static int obtenerNumero (){
         System.out.println(exc);
     }
 }
-
+```
 - Obtener pos del array
+```java
 public static int obtener_pos_arr (int [] arr, int num){
     int pos = 0;
     while ((pos < MAX) && (arr[posicion]) != num){
@@ -103,7 +109,7 @@ public static int obtener_pos_arr (int [] arr, int num){
     }
     return pos;
 }
-
+```
 - Corrimiento a la derecha
 Se utiliza para insertar un elemento a un array
 
@@ -112,6 +118,7 @@ Se utiliza para eliminar un elemento de un array
 
 - **Estructuras ordenadas**
 - Desordenado
+```java
 private static int buscar_pos_desordenado (int [] arr, int valor){
     int pos = 0;
     while ((pos < MAX) && (arr[pos] != valor)){
@@ -123,8 +130,9 @@ private static int buscar_pos_desordenado (int [] arr, int valor){
         return -1;
     }
 }
-
+```
 - Ordenado
+```java
 private static int buscar_pos_ordenado (int [] arr, int valor){
     int pos = 0;
     while ((pos < MAX) && (arr[pos] > valor)){ // > para decreciente y < para creciente
@@ -136,9 +144,10 @@ private static int buscar_pos_ordenado (int [] arr, int valor){
         return -1;
     }
 }
-
+```
 - **Metodos de ordenamiento**
 Selección
+```java
 public static void seleccion(int arr[]) {
     int i, j, menor, pos, tmp;
     for (i = 0; i < MAX; i++) { // tomamos como menor el primero
@@ -157,8 +166,9 @@ public static void seleccion(int arr[]) {
         }
     }
 }
-
+```
 - Inserción
+```java
     public static void insercion(int arr[]){
         for (int i = 1; i < MAX; i++) {
             int aux = arr[i];
@@ -170,9 +180,10 @@ public static void seleccion(int arr[]) {
         arr[j+1] = aux;
     }
 }
-
+```
 - Burbujeo
 public static void burbujeo(int[] arr){
+    ```java
     int temp;
     for(int i = 1;i < MAX;i++){
         for (int j = 0 ; j < MAX - 1; j++){
@@ -184,7 +195,7 @@ public static void burbujeo(int[] arr){
         }
     }
 }
-
+```
 **Tips**
 - Declarar MAX como variable global
 public final static int MAX = 10;
