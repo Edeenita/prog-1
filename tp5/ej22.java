@@ -21,7 +21,7 @@ public class ej22 {
         for(int i = 0; i < MAX; i++){
             if (esPar(arrInt[i])) {
                 corriento_izquierda(arrInt, i);
-                arrInt[MAX-1] = -1;
+                arrInt[MAX-1] = -1; //el fin del array se coloca un -1 para evitar que se repita un numero
                 i--;
             }
         }
