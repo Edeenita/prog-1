@@ -80,17 +80,7 @@ public static void corrimiento_derecha(int[] arr, int pos){
                 ultFin = fin;
                 ultIni = ini;
             }
-// Si queremos obtener alguna otra posicion como la anteultima
-    while (ini < MAX) {
-        ini = buscarInicio(arrInt, fin + 1);
-        if (ini < MAX) {
-            fin = buscarFin(arrInt, ini);
 
-            anteUltIni = ultIni;
-            anteUltFin = ultFin;
-                
-            ultIni = ini;
-            ultFin = fin;
 ```
 
 # COMO SABER SI UNA SECUENCIA CUMPLE CON UN PATRON
@@ -114,6 +104,18 @@ if(tamanio > tamanioMayor){
     tamanioMayor = tamanio;
     iniMayor = ini;
     finMayor = fin;
+
+// Si queremos obtener alguna otra posicion como la anteultima
+    while (ini < MAX) {
+        ini = buscarInicio(arrInt, fin + 1);
+        if (ini < MAX) {
+            fin = buscarFin(arrInt, ini);
+
+            anteUltIni = ultIni;
+            anteUltFin = ultFin;
+                
+            ultIni = ini;
+            ultFin = fin;
 ```
 
 
