@@ -95,18 +95,16 @@ public static void corrimiento_derecha(int[] arr, int pos){
 
 # COMO SABER SI UNA SECUENCIA CUMPLE CON UN PATRON
 ```java
-    public static boolean esPatron(int[] arrInt, int [] arrPatron, int ini, int fin, int tamanio){
-        boolean esPatron = false;
-        int pos = 0;
-        for(int i = ini; i <= fin; i++){
-            if (arrPatron[pos] == arrInt[i] ) {
-                pos++;
-            }
+    public static boolean cumplePatron(int[] arr, int ini, int fin, int [] arrPatron, int iniP, int finP) {
+        if (fin - ini + 1 < finP - iniP + 1) {
+            return false;
         }
-        if(pos==tamanio){
-            esPatron = true;
+
+        while (ini <= fin && arr[ini] == arr[iniP]) {
+            ini++;
+            iniP++;
         }
-        return esPatron;
+        return ini > fin;
     }
 ```
 # OBTENER INICIO Y FIN DE SECUENCIA DE MAYOR TAMAÑO

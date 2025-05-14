@@ -10,7 +10,7 @@ public class ej15 {
         resolverEjercicio();
     }
 
-    public void resolverEjercicio() {
+    public static void resolverEjercicio() {
         int numero_natural = -1;
         while (numero_natural > 0){
             System.out.println();
