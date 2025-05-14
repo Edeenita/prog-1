@@ -50,7 +50,6 @@ public class ejtipoparcial1 {
 
         while (ini < fin && arr[ini] == arr[ini + 1]) {
             ini++;
-
         }
         return ini == fin;
     }
