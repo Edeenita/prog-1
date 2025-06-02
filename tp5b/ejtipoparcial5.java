@@ -30,7 +30,7 @@ public class ejtipoparcial5 {
                 fin = buscarFin(arrE, ini);
                 if (pedido == pedidoFaltante) { 
                     agregarPedido(arrE,ini, fin, empanadaRoquefort);
-                    fin = ini + 1;
+                    fin = fin + 1;
                 }
                 pedido++;
             }

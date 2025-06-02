@@ -32,7 +32,7 @@ public class ejtipoparcial4 {
                 fin = buscarFin(arrP, ini);
                 if (buscarPatron(arrP, arrT, ini, fin)) {
                     añadirElemento(arrP, fin, r);
-                    fin = ini + 1; // ya que se abrá agregado un elemento a la secuencia! 
+                    fin = fin + 1; // ya que se abrá agregado un elemento a la secuencia! 
                     c--;
                 }
             }
@@ -45,7 +45,7 @@ public class ejtipoparcial4 {
         int i = ini;
         int posT = 0;
         boolean encontreElemento = false;
-        while (posT < 2 && !encontreElemento) {
+        while (posT < MAXT && !encontreElemento) {
             while(!encontreElemento && i <= fin){
                 if(arrT[posT] != arrP[i]) {
                     i++;
