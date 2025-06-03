@@ -26,14 +26,17 @@ public class ejtipoparcial4 {
         int r = 22; // aqui el dueño deberia cargar el producto en promoción
         int c = 2; // aqui el dueño deberia cargar la cantidad de veces que se hará la promoción
         int ini = 0, fin = -1;
-        while (c > 0 && ini < MAXP) {
+        while (ini < MAXP) {
             ini = buscarInicio(arrP, fin+1);
             if (ini < MAXP) {
                 fin = buscarFin(arrP, ini);
-                if (buscarPatron(arrP, arrT, ini, fin)) {
-                    añadirElemento(arrP, fin, r);
-                    fin = fin + 1; // ya que se abrá agregado un elemento a la secuencia! 
-                    c--;
+                for(int pos = 0; pos < MAXT; pos++){
+                    if (buscarPatron(arrP, arrT, ini, fin, pos) && c > 0 ) {
+                        añadirElemento(arrP, fin, r);
+                        arrP[pos + 1] = r;
+                        fin = fin + 1; // ya que se abrá agregado un elemento a la secuencia! 
+                        c--;
+                    }
                 }
             }
         }
@@ -41,30 +44,19 @@ public class ejtipoparcial4 {
         imprimirArray(arrP);
     }
 
-    public static boolean buscarPatron (int[]arrP, int[] arrT, int ini, int fin){
-        int i = ini;
-        int posT = 0;
-        boolean encontreElemento = false;
-        while (posT < MAXT && !encontreElemento) {
-            while(!encontreElemento && i <= fin){
-                if(arrT[posT] != arrP[i]) {
-                    i++;
-                }else{
-                        encontreElemento = true;
-                    }
-                }
-            if(!encontreElemento){
-                posT++;
-                i = ini; // !!!!!!!!!!!
-            }    
+    public static boolean buscarPatron (int[]arrP, int[] arrT, int ini, int fin, int pos){
+        while (ini <= fin && arrP[ini] != arrT[pos]) {
+            ini++;
         }
-        return encontreElemento;
+        if(arrP[ini] == arrT[pos]){
+            return true;
+        }
+        return false;
     }
     public static void añadirElemento(int[] arrP, int pos, int r) {
         for (int i = MAXP - 1; i > pos + 1; i--) {
             arrP[i] = arrP[i - 1];
         }
-        arrP[pos + 1] = r; // !!!!!!!!
     }
     
 

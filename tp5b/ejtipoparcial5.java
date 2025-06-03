@@ -39,22 +39,18 @@ public class ejtipoparcial5 {
     }
 
     public static void agregarPedido(int[] arrE,int ini, int fin, int empanada){
-        boolean seInterto = false;
-        while(ini < fin && !seInterto){
-            if(arrE[ini] < arrE[ini+1]){
-                añadirEmpanada(arrE, ini, empanada);
-                seInterto = true;
-            }else{
-                ini++;
-            }
+        while (ini < fin && arrE[ini] <= empanada) {
+            ini++;
         }
+        añadirEmpanada(arrE, ini, empanada);
+        arrE[ini] = empanada;
+        
     }
 
     public static void añadirEmpanada(int []arr , int pos, int empanada){
         for(int i = MAXE - 1; i > pos; i--){
             arr[i] = arr[i-1];
         }
-        arr[pos+1] = empanada;
     }
     public static int buscarInicio(int[] arr, int pos) {
         while (pos < MAXE && arr[pos] < 0) {
