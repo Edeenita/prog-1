@@ -1,4 +1,4 @@
->[!INFO]
+[!INFO]
 > En una plataforma educativa en línea, los estudiantes leen el material de estudio 
 > que está dividido en secciones. 
 > El sistema registra, en un  arreglo T de tamaño MAXT, [!IMPORTANT]
