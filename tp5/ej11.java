@@ -33,23 +33,21 @@ public class ej11 {
     
 
     public static boolean todosPresentes(int [] arrA, int [] arrB){
-        boolean estanTodos = true;
-        int i = 0;
-        while (i < MAX && estanTodos){
-            boolean encontrado = false;
+        boolean todosEstan = true;
+        for(int i = 0; i < MAX && todosEstan; i++){
             int j = 0;
-            while (j < MAX && !encontrado){
-                if (arrA[i] == arrB[j]){
+            boolean encontrado = false;
+            while(j < MAX && !encontrado){
+                if(arrA[i] == arrB[j]){
                     encontrado = true;
                 }
                 j++;
             }
-            if (!encontrado){
-                estanTodos = false;
+            if(!encontrado){
+                todosEstan = false;
             }
-            i++;
         }
-        return estanTodos;
+        return todosEstan;
     }
     
 
