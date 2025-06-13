@@ -22,7 +22,7 @@ public class miResolucion {
                 }
                 else {
                     //Se podia modularizar !
-                    totalMinutos = sumarElementos(arrT, ini, fin);
+                    totalMinutos = sumarMinutos(arrT, ini, fin);
                     horas = totalMinutos / 60; //hardcoded pero se entiende que 60 minutos por hora
                     minutos = totalMinutos % 60;
                     eliminarSecuencia(arrT, ini, fin);
@@ -68,7 +68,7 @@ public class miResolucion {
         }
     }
 
-    public static int sumarElementos(int[] arr, int ini, int fin) {
+    public static int sumarMinutos(int[] arr, int ini, int fin) {
         int suma = 0;
         for (int i = ini; i <= fin; i++){
             suma += arr[i];
