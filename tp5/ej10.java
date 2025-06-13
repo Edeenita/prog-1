@@ -37,6 +37,9 @@ public class ej10 {
     }
 
     public static boolean esPrimo(int[] arr, int pos) {
+        if (arr[pos] < 2) {
+            return false;
+        }
         boolean esPrimo = true;
         int i = 2;
         while (i * i <= arr[pos] && esPrimo) {

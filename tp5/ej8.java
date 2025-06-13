@@ -24,14 +24,10 @@ public class ej8 {
 
     public static boolean buscar_pos_ordenado(int[] arr){
         int pos = 0;
-        boolean esAscendente = true;
-        while(pos < MAX - 1 && esAscendente){
-            if(arr[pos] >= arr[pos+1]){
-                esAscendente = false;
-            }
+        while(pos < MAX - 1 && arr[pos] <= arr[pos+1]){
             pos++;
         }
-        return esAscendente;
+        return pos == MAX - 1;
     }
 
         public static void mostrarArray(int[] arr) {

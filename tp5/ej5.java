@@ -9,20 +9,24 @@ public class ej5 {
     public static final int MAX = 10;
     public static void main(String[] args) {
         char [] arrCaracter = new char[MAX];
-        char [] arrInvertido = new char [MAX];
         cargar_arreglo_aleatorio_char(arrCaracter);
         //Muestro el array antes
         mostrarArray(arrCaracter);
-
-        invertirArray(arrCaracter, arrInvertido);
-        mostrarArray(arrInvertido);
+        invertirArray(arrCaracter);
+        mostrarArray(arrCaracter);
 
     }
 
 
-    public static void invertirArray(char[] arrCaracter, char[] arrInvertido) {
-        for(int i = 0; i < MAX; i++){
-            arrInvertido[i] = arrCaracter[MAX - 1 - i];
+    public static void invertirArray(char[] arrCaracter) {
+        int inicio = 0;
+        int fin = MAX - 1;
+        while (inicio < fin) {
+            char temp = arrCaracter[inicio];
+            arrCaracter[inicio] = arrCaracter[fin];
+            arrCaracter[fin] = temp;
+            inicio++;
+            fin--;
         }
     }
 

@@ -15,19 +15,25 @@ public class ej9 {
     }
 
     public static void resolverEjercicio(char [] arrChar){
-        boolean esRepetida = letraRepetida(arrChar);
-        System.out.println("Existe una letra repetida: " + esRepetida);
+        boolean tieneRepetida = tieneLetraRepetida(arrChar);
+        System.out.println("Existe una letra repetida: " + tieneRepetida);
     }
 
-    public static boolean letraRepetida(char [] arr){
+    public static boolean tieneLetraRepetida(char[] arr) {
+        int i = 0;
         boolean esRepetida = false;
-        for(int i = 0; i < MAX; i++){
-            for(int j= i+1; j < MAX; j++){
+
+        while (i < MAX - 1 && !esRepetida) {
+            int j = i + 1;
+            while (j < MAX && !esRepetida) {
                 if (arr[i] == arr[j]) {
-                    esRepetida = true;
-                }
+                        esRepetida = true;
+                    }
+                j++;
             }
+            i++;
         }
+
         return esRepetida;
     }
 
