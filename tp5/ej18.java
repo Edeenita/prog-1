@@ -24,17 +24,25 @@ public class ej18 {
 
     public static void resolverEjercicio(int[]arrInt){
         int num = 0;
-        boolean esPrimerOcurrencia = false;
         num = pedirNumero();
-        for(int pos = 0; pos < MAX; pos++ ){
-            if(!esPrimerOcurrencia && arrInt[pos] == num){
-                corriento_izquierda(arrInt, pos);
-                esPrimerOcurrencia = true;
-            }
+        int pos = buscarPrimeraOcurrencia(arrInt, num);
+        if (pos != -1) {
+            corrimento_izquierda(arrInt, pos);
         }
     }
 
-    public static void corriento_izquierda(int[] arr, int pos){
+    public static int buscarPrimeraOcurrencia(int[] arr, int numero) {
+        int i = 0;
+        while (i < MAX && arr[i] != numero) {
+            i++;
+        }
+        if (i < MAX) {
+            return i;
+        }
+        return -1;
+    }
+
+    public static void corrimento_izquierda(int[] arr, int pos){
         for(int i = pos; i < MAX -1; i++ ){
             arr[i] = arr[i+1];
         }
