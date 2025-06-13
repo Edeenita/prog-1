@@ -23,17 +23,11 @@ public class ej14 {
     }
 
     public static void resolverEjercicio(char [] arrChar, int[] arrPosVocales, int[]arrPosConsonantes){
-        int posVocales = 0;
-        int posConsonantes = 0;
-        for(int i = 0; i < MAX; i++){
-            if(esVocal(arrChar[i])){
-                posVocales = i;
-                arrPosVocales[i] = posVocales;
-                arrPosConsonantes[i] = -1;
-            }else{
-                posConsonantes = i;
-                arrPosConsonantes[i] = posConsonantes;
-                arrPosVocales[i] = -1;
+        for (int i = 0; i < MAX; i++) {
+            if (esVocal(arrChar[i])) {
+                arrPosVocales[i] = i+1;
+            } else {
+                arrPosConsonantes[i] = i+1;
             }
         }
     }
