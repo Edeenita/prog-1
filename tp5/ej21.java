@@ -13,14 +13,14 @@ public class ej21 {
     public static void resolverEjercicio(int[]arrInt){
         int num = 0;
         num = pedirNumero();
-        boolean seInterto = false;
-        for(int i = 0; i < MAX; i++){
-            if(!seInterto && num > arrInt[i]){
-                corrimiento_derecha(arrInt, i);
-                arrInt[i] = num;
-                seInterto = true;
-            }
+        int i = 0;
+        while (i < MAX && arrInt[i] > num) {
+            i++;   
         }
+        if (i < MAX) {
+            corrimiento_derecha(arrInt, i);
+            arrInt[i] = num;
+        } 
     }
 
     public static void corrimiento_derecha(int[] arr, int pos){
