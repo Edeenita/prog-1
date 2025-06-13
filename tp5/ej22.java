@@ -18,11 +18,13 @@ public class ej22 {
     }
 
     public static void resolverEjercicio(int[]arrInt){
-        for(int i = 0; i < MAX; i++){
+        int i = 0;
+        while (i < MAX) {
             if (esPar(arrInt[i])) {
                 corriento_izquierda(arrInt, i);
                 arrInt[MAX-1] = -1; //el fin del array se coloca un -1 para evitar que se repita un numero
-                i--;
+            } else {
+                i++;
             }
         }
     }
