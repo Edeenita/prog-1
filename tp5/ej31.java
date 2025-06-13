@@ -26,15 +26,13 @@ public class ej31 {
     }
 
     
-
-    public static void invertirUltSecuencia(int[] arr, int ultFin, int ultIni) {
-        int tamanio = ultFin - ultIni + 1;
-        int [] arrAux = new int[tamanio];
-        for (int i = 0; i < tamanio; i++){
-            arrAux[i] = arr[ultIni+i];
-        }
-        for(int j = 0; j < tamanio; j++){
-            arr[ultIni + j] = arrAux[tamanio - 1 - j ];
+    public static void invertirUltSecuencia(int[] arr ,int ultFin, int ultIni) {
+        while (ultIni < ultFin) {
+            int temp = arr[ultIni];
+            arr[ultIni] = arr[ultFin];
+            arr[ultFin] = temp;
+            ultIni++;
+            ultFin--;
         }
     }
 
