@@ -43,7 +43,6 @@ public class ej30 {
     
     public static void moverSecuencia(int[]arr, int ini, int fin){
         for(int i = ini; i <= fin; i++){
-            mostrarArray(arr);
             corrimiento_derecha(arr, ini);
         }
     }
@@ -54,17 +53,16 @@ public class ej30 {
     }
 
     public static boolean esPatron(int[]arrA, int[]arrP, int ini, int fin, int tamanio){
-        boolean esPatron = false;
+
         int pos = 0;
-        for(int i = ini; i <= fin; i++){
-            if(arrA[i] == arrP[pos]){
-                pos++;
-            }
+        while (ini <= fin && arrA[ini] == arrP[pos]) {
+            ini++;
+            pos++;
         }
-        if(tamanio == pos){
-            esPatron = true;
+        if(ini > fin){
+            return true;
         }
-        return esPatron;
+        return false;
     } 
 
     public static void eliminarSecuencia(int[]arr, int ini, int fin){
