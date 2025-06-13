@@ -29,7 +29,7 @@ public class ej19 {
         int pos = 0;
         while (pos < MAX) {
             if (arrInt[pos] == num) {
-                corriento_izquierda(arrInt, pos);
+                corrimento_izquierda(arrInt, pos);
             }
             else {
                 pos++;
@@ -37,7 +37,7 @@ public class ej19 {
         }
     }
 
-    public static void corriento_izquierda(int[] arr, int pos){
+    public static void corrimento_izquierda(int[] arr, int pos){
         for(int i = pos; i < MAX -1; i++ ){
             arr[i] = arr[i+1];
         }

@@ -16,43 +16,42 @@ public class ej20 {
     }
 
     public static void resolverEjercicio(int [] arrA, int [] arrB){
-        boolean todosEstan = todosPresentes(arrA, arrB);
-        if (todosEstan) {
-            for(int i = 0; i < MAX; i++){   
+        if (todosPresentes(arrA, arrB)) {
+            int i = 0;
+            while(i < MAX){   
                 if(arrA[i] == arrB[i]){
-                    corriento_izquierda(arrA, i);
-                    arrA[MAX-1] = 0; //basicamente hay que poner que en el MAX-1 se ponga algo como 0 o -1 para que no quede repetido el 1 por ejemplo y explote
-                    i--;
+                    corrimento_izquierda(arrA, i);
+                    arrA[MAX-1] = 0; //basicamente hay que poner que en el MAX-1 se ponga algo como 0 o -1 para que no quede repetido el ultimo valor
+                } else {
+                    i++;
                 }
             }
         }
     }
     
 
-    public static void corriento_izquierda(int[] arr, int pos){
+    public static void corrimento_izquierda(int[] arr, int pos){
         for(int i = pos; i < MAX -1; i++ ){
             arr[i] = arr[i+1];
         }
     }
 
+
     public static boolean todosPresentes(int [] arrA, int [] arrB){
-        boolean estanTodos = true;
-        int i = 0;
-        while (i < MAX && estanTodos){
-            boolean encontrado = false;
+        for(int i = 0; i < MAX; i++){
             int j = 0;
-            while (j < MAX && !encontrado){
-                if (arrA[i] == arrB[j]){
+            boolean encontrado = false;
+            while(j < MAX && !encontrado){
+                if(arrA[i] == arrB[j]){
                     encontrado = true;
                 }
                 j++;
             }
-            if (!encontrado){
-                estanTodos = false;
+            if(!encontrado){
+                return false;
             }
-            i++;
         }
-        return estanTodos;
+        return true;
     }
     
 

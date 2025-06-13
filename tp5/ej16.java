@@ -8,10 +8,10 @@ public class ej16 {
     public static void main(String[] args) {
         int [] arrInt = {1,2,3,4,5,6,7,8,9,10};
         int pos = 3;
-        corriento_izquierda(arrInt, pos);
+        corrimento_izquierda(arrInt, pos);
         mostrarArray(arrInt);
     }
-    public static void corriento_izquierda(int[] arr, int pos){ 
+    public static void corrimento_izquierda(int[] arr, int pos){ 
         for(int i = pos; i < MAX -1; i++ ){
             arr[i] = arr[i+1];
         }

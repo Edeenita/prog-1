@@ -33,8 +33,7 @@ public class ej11 {
     
 
     public static boolean todosPresentes(int [] arrA, int [] arrB){
-        boolean todosEstan = true;
-        for(int i = 0; i < MAX && todosEstan; i++){
+        for(int i = 0; i < MAX; i++){
             int j = 0;
             boolean encontrado = false;
             while(j < MAX && !encontrado){
@@ -44,10 +43,10 @@ public class ej11 {
                 j++;
             }
             if(!encontrado){
-                todosEstan = false;
+                return false;
             }
         }
-        return todosEstan;
+        return true;
     }
     
 
