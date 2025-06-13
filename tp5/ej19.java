@@ -26,11 +26,13 @@ public class ej19 {
     public static void resolverEjercicio(int[] arrInt){
         int num = 0;
         num = pedirNumero();
-        for(int pos = 0; pos < MAX; pos++ ){
-            if(arrInt[pos] == num){
+        int pos = 0;
+        while (pos < MAX) {
+            if (arrInt[pos] == num) {
                 corriento_izquierda(arrInt, pos);
-                arrInt[MAX-1] = 0;
-                pos--; //comienza a recorrer desde la posicion anterior
+            }
+            else {
+                pos++;
             }
         }
     }
