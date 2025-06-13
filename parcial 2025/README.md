@@ -1,4 +1,4 @@
-> [!INFO]
+>[!INFO]
 > En una plataforma educativa en línea, los estudiantes leen el material de estudio 
 > que está dividido en secciones. 
 > El sistema registra, en un  arreglo T de tamaño MAXT, [!IMPORTANT]
@@ -12,7 +12,7 @@
 > sino que funcionan únicamente como delimitadores de sesión. 
 > También se insertan uno o más valores negativos al inicio y al final del arreglo T. [!ATTENTION]
 
-> [!EXAMPLE]
+>[!EXAMPLE]
 > En el siguiente ejemplo, se muestra un arreglo T que contiene los tiempos de lectura de 4 estudiantes.
 > El estudiante 1 leyó 5 secciones:   
 > para la primera tardó 23 minutos, para la segunda, 21, y así sucesivamente.
@@ -33,7 +33,7 @@
 > Nota: Para convertir la suma total de minutos al formato horas y minutos, se debe dividir el total por 60 para obtener las horas y usar 
 > el resto de esa división para los minutos. Por ejemplo, 75 minutos se convierten a 1 hora y 15 minutos.
 
-> [!EXAMPLE]
+>[!EXAMPLE]
 > Para el ejemplo anterior, los alumnos que muestran una posible falta de concentración o interés en el tema son el 1 y el 3, y el arreglo 
 > resultante luego de pasar los tiempos totales al formato hora y minutos sería:
 ```java
