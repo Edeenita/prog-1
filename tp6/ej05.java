@@ -17,11 +17,12 @@ public class ej05 {
             {41, 42, 43, 44, 45, 46, 47, 48, 49, 50}
         };
 
-        int numero = 22;
-        eliminarNumero(matriz, numero);
+        
+        eliminarNumero(matriz);
         printMatriz(matriz);
     }
-    public static void eliminarNumero(int[][] matriz, int numero) {
+    public static void eliminarNumero(int[][] matriz) {
+        int numero = 22;
         boolean eliminado = false;
         while (!eliminado) {
             for (int i = 0; i < FILAS; i++) {
