@@ -1,3 +1,4 @@
+//Promocionado con 9
 public class miResolucion {
     final static int MAXT = 25;
     final static int SEPARADOR = 0;
