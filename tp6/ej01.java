@@ -28,7 +28,6 @@ public class ej01 {
         for (int i = 0; i < FILAS; i++) {
             for (int j = 0; j < COLUMNAS / 2; j++) {
                 int temp = m[i][j];
-                System.out.println(temp);
                 m[i][j] = m[i][COLUMNAS - 1 - j];
                 m[i][COLUMNAS - 1 - j] = temp;
                 
